@@ -2,10 +2,9 @@
   "name": "luhn",
   "version": "1.0.0",
   "description": "Luhn check-digit",
-  "main": "luhn.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "jest --coverage",
-    "start": "node luhn.js"
+    "test": "jest --coverage"
   },
   "contributors": [
     {

@@ -1,7 +1,7 @@
+const m = [0, 2, 4, 6, 8, 1, 3, 5, 7, 9]
 
 const Digit = message => {
-  let m = [0, 2, 4, 6, 8, 1, 3, 5, 7, 9],
-      i = message.length - 1,
+  let i = message.length - 1,
       x = 0
 
   while (i >= 0) {

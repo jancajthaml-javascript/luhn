@@ -1,12 +1,12 @@
 test("luhn.Digit", async () => {
-  const luhn = require("../src/luhn.js")
+  const luhn = require("../src/index.js")
 
   expect(luhn.Digit("00123014764700968321002")).toBe(4)
   expect(luhn.Digit("xy-1")).toBe(-1)
 })
 
 test("luhn.Validate", async () => {
-  const luhn = require("../src/luhn.js")
+  const luhn = require("../src/index.js")
 
   expect(luhn.Validate("001230147647009683210024")).toBe(true)
   expect(luhn.Validate("1234567812345678")).toBe(false)
@@ -14,7 +14,7 @@ test("luhn.Validate", async () => {
 })
 
 test("luhn.Generate", async () => {
-  const luhn = require("../src/luhn.js")
+  const luhn = require("../src/index.js")
 
   let generated = luhn.Generate("00123014764700968321002")
 

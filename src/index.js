@@ -7,7 +7,7 @@ const Digit = message => {
   while (i >= 0) {
     let d = +message[i]
     if (d != d) {
-      return -1
+      return undefined
     }
     x += i-- & 1 ? d : m[d]
   }
@@ -16,8 +16,12 @@ const Digit = message => {
   return x == 10 ? 0 : x
 }
 
-const Validate = message => Digit(message) == 0
-const Generate = message => `${message}${Digit(message)}`
+const Validate = message => Digit(message) === 0
+
+const Generate = message => {
+  let d = Digit(message)
+  return d ? `${message}${d}` : undefined
+}
 
 module.exports = {
   Digit,

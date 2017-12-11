@@ -2,7 +2,7 @@ test("luhn.Digit", async () => {
   const luhn = require("../src/index.js")
 
   expect(luhn.Digit("00123014764700968321002")).toBe(4)
-  expect(luhn.Digit("xy-1")).toBe(-1)
+  expect(luhn.Digit("xy-1")).toBe(undefined)
 })
 
 test("luhn.Validate", async () => {
@@ -20,5 +20,7 @@ test("luhn.Generate", async () => {
 
   expect(generated).toBe("001230147647009683210024")
   expect(luhn.Validate(generated)).toBe(true)
+
+  expect(luhn.Generate("xy-1")).toBe(undefined)
 })
 
